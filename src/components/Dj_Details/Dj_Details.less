@@ -1,0 +1,51 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+
+.Boutique-recommend{
+    background: #FFFFff;
+    .px2rem(padding-top,20);
+    .px2rem(padding-bottom,10);
+    span{
+        .px2rem(margin-right,20);
+        color: #f05053;
+    }
+    p{
+        margin: 0;
+        padding: 0;
+    }
+    .address{
+        .px2rem(padding-top,5);
+        .px2rem(padding-bottom,5);
+        
+        span{
+            color: #000;
+        }
+    }
+        .collect{
+            float: right;
+            display: inline-block;
+            .px2rem(width,38);
+            .px2rem(height,38);
+            background: url(../../../public/details/sc.png) no-repeat center top;
+            background-size: contain;
+        }
+    .sc{
+        .px2rem(padding-top,5);
+        .px2rem(padding-bottom,5);
+        .px2rem(margin-bottom,20);
+        
+        
+    }
+    .phone{
+        float: right;
+        position: relative;
+        .px2rem(top,-10);
+        display: inline-block;
+        .px2rem(width,38);
+        .px2rem(height,38);
+        color: #000000;
+        background: url(../../../public/details/liebiaodianhua.png) no-repeat center top;
+        background-size: contain;
+   }
+}

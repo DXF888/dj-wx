@@ -1,0 +1,36 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+.Boutique-recommend{
+    width: 100%;
+//  .px2rem(padding-bottom, 100);
+    a{
+        display: inline-block;
+        width: 100%;
+    }
+    .recommend_item{
+        .recommend-top{
+            .px2rem(padding-left, 92);
+            .px2rem(padding-top, 20);
+            .px2rem(padding-bottom, 20);
+            background: url(../../../public/indexImgs/hotel-logo.png) no-repeat left center;
+            background-size: 10%;
+            color: #404040;
+            h3{
+                .px2rem(font-size, 24);
+                margin: 0;
+                padding: 0;
+                .px2rem(padding-bottom, 20);
+            }
+            p{
+                margin: 0;
+                padding: 0;
+                .px2rem(font-size, 14);
+            }
+        }
+        img{
+            .px2rem(height, 512);
+            width: 100%;
+        }
+    }
+}

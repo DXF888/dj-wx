@@ -1,0 +1,33 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+.single-foo-menu {
+  position: absolute;
+  z-index: 90 !important;
+  width: 100%;
+}
+
+.single-menu-active .single-top-nav-bar{
+  z-index: 1002;
+}
+
+.single-top-nav-bar {
+  position: fixed;
+  color: #000;
+  .px2rem(font-size, 34);
+  width: 100%;
+  z-index: 1002;
+}
+.am-navbar-title,.am-navbar-right,.am-navbar-left {
+  color: #000!important;
+  .px2rem(font-size, 34);
+}
+.menu-mask {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: 89;
+}

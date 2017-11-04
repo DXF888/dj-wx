@@ -1,0 +1,27 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+
+.headline{
+    
+    .px2rem(height,100);
+    .px2rem(line-height,100);
+    .px2rem(font-size,24);
+    color: #FFFFFF;
+    .px2rem(padding-left,94);
+    background: url('./imgs/toutiao.png') no-repeat 5%;
+    background-color: #ff5c5c;
+    background-size:4%;
+    h3,p{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+    h3{
+        .px2rem(font-size,24);
+    }
+    p{
+        .px2rem(font-size,24);
+        .px2rem(padding-left,64);
+    }
+}

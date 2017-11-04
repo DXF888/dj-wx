@@ -1,0 +1,14 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+.Tabs{
+    .am-tabs-default-bar-tab-active{
+        color: #f05053;
+    }
+    .am-tabs-default-bar-underline{
+        border-color: #f05053;
+    }
+    .am-tabs-default-bar-tab{
+        .px2rem(font-size,24);
+    }
+}
