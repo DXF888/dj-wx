@@ -9,6 +9,7 @@ import { indexBannerSize, indexbannerUrl } from '../../config/index';
 
 import './Dj_Slider.less';
 
+
 class Example extends React.Component {
 	constructor(props){
 		super(props);
@@ -61,6 +62,7 @@ class Example extends React.Component {
 	componentDidMount() {
 		fetchData(this.props.url)
 		  .then((_data) => {
+		  	console.log(_data);
 		  	if(_data.response.length !== 0){
 		  		this.setState({
 		  				loadinig:false,
@@ -72,6 +74,7 @@ class Example extends React.Component {
 		  		});
 		  	}
 		  });
+		  
 	}
 };
 

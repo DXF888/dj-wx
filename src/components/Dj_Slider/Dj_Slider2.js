@@ -19,7 +19,7 @@ class Example1 extends React.Component {
 			loadinig: true,
 			data: [],
 			show: true,
-			id:Id
+			id:Id,
 		};
 	}
 	render() {
@@ -36,24 +36,27 @@ class Example1 extends React.Component {
 	  		  	  {
 	  		  	    loadinig
 	  		  	      ? <ActivityIndicator text="正在加载" />
-	  		  	      : data.length > 1
+	  		  	      : data.length >= 1
 	  		  	        ? <Carousel
 	                      infinite
 	                      autoplay
 	                      >
 	  		  	        	{
 	  		  	        		data.map(({ src, img, id }, idx) => (
-	  		  	        			<Link to={`/detail/${id}`} href={idx} key={idx} className='index_banner_item'>
-	  		  	        				<img src={'http://120.55.70.81:8088/dajiaserver/'+data[idx]} style={style} />
-	  		  	        			</Link>
+	  		  	        			<img key={idx} src={'http://120.55.70.81:8088/dajiaserver/'+data[idx]} style={style} />
 	  		  	        		))
 	  		  	        	}
 	  		  	        </Carousel>
-	  		  	        : data.map(({ src, img, id }, idx) => (
-	  		  	        	<Link to={`/detail/${id}`} href={src} key={idx} className="index_banner_item" >
-	                          <img src={'http://120.55.70.81:8088/dajiaserver/'} />
-	                        </Link>
-	  		  	        ))
+	  		  	        : <Carousel
+	                      infinite
+	                      autoplay
+	                      >
+	  		  	        	{
+	  		  	        		data.map(({ src, img, id }, idx) => (
+	  		  	        			<img key={idx} src={'http://120.55.70.81:8088/dajiaserver/'+data[idx]} style={style} />
+	  		  	        		))
+	  		  	        	}
+	  		  	        </Carousel>
 	  		  	  }
 	  		    </div>
 	  		    : null
@@ -62,9 +65,11 @@ class Example1 extends React.Component {
 	  );
 	}
 	componentDidMount() {
-		fetchData(this.props.url,{
-			hotelId : this.state.id
-		})
+		var argt = {
+			[this.props.argt] : this.state.id,
+		};
+		
+		fetchData(this.props.url,argt)
 		.then((_data) => {
 		  	if(_data.response.length !== 0){
 		  		this.setState({

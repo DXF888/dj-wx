@@ -39,7 +39,7 @@ class Details_interest extends React.Component {
 		  		  	        					<img src={'http://120.55.70.81:8088/dajiaserver/'+listimg} />
 												<div className='recommend-top'>
 													<h3>{businessname}</h3>
-													<p>￥{pricemin}<span>销量:{999}</span></p>
+													<p>￥{pricemin}{/*<span>销量:{999}</span>*/}</p>
 												</div>
 		  		  	        				</Link>
 		  		  	        		))}
@@ -50,7 +50,7 @@ class Details_interest extends React.Component {
 		  		  	        					<img src={'http://120.55.70.81:8088/dajiaserver/'+listimg} />
 												<div className='recommend-top'>
 													<h3>{businessname}</h3>
-													<p>￥{pricemin}<span>销量:{999}</span></p>
+													<p>￥{pricemin}{/*<span>销量:{999}</span>*/}</p>
 												</div>
 		  		  	        				</Link>
 		  		  	        			</WingBlank>

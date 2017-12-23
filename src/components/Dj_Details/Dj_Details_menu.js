@@ -10,14 +10,16 @@ import './Dj_Details_menu.less';
 class Dj_Details_menu extends React.Component {
 	constructor(props){
 		super(props);
-		var thisURL = location.hash;
-		var getval = thisURL.split('/');
-		var Id = getval.slice(-1).join();
+		let thisURL = location.hash;
+		let getval = thisURL.split('/');
+		let Id = getval.slice(-1).join();
+		let Id1 = getval.slice(2,3).join();
 		this.state = {
 			loadinig: true,
 			data: [],
 			show: true,
-			id:Id
+			id:Id,
+			id1:Id1
 		};
 	}
 	render() {
@@ -33,12 +35,12 @@ class Dj_Details_menu extends React.Component {
 	  		  	      : data.length != 0
 	  		  	        ? 
 		  		  	        		data.map(({bigpackagename, packageprice }, idx) => (
-									      	<Link to={`/detail/${idx}`} href={idx} key={idx} className='menu_item'>
+									      	<Link to={`/menu/${this.state.id1}/${idx}`} href={idx} key={idx} className='menu_item'>
 												<p>菜单名称:<span className='cdm'>{bigpackagename}</span><span className='jq'>价格:<span className='ys'>{packageprice}/桌></span></span></p>
 		  		  	        				</Link>
 		  		  	        		))
 	  		  	        : data.map(({listimg, banquethallid ,businessname,tablemax}, idx) => (
-									    <Link to={`/detail/menu/${idx}`} href={idx} key={idx} className='menu_item'>
+									    <Link to={`/menu/${this.state.id1}/${idx}`} href={idx} key={idx} className='menu_item'>
 											<p>菜单名称:<span>{bigpackagename}</span>价格:<span>{packageprice}</span></p>
 		  		  	        			</Link>
 		  		  	        		))

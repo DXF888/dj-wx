@@ -9,9 +9,9 @@ class Dj_Details extends React.Component {
 	
 		constructor(props){
 			super(props);
-			var thisURL = location.hash;
-			var getval = thisURL.split('/');
-			var Id = getval.slice(-1).join();
+			let thisURL = location.hash;
+			let getval = thisURL.split('/');
+			let Id = getval.slice(-1).join();
 			this.state = {
 				loadinig: true,
 				data: [],
@@ -55,6 +55,7 @@ class Dj_Details extends React.Component {
 		
 		
 		componentDidMount() {
+			console.log(this.props);
 			fetchData('http://120.55.70.81:8088/dajiaserver/Rest/shop/get_hotel_info',
 			{
 				hotelId:this.state.id

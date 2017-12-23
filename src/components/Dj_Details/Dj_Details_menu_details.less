@@ -1,0 +1,88 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+.menu-detils{
+    width: 100%;
+    .Details_header{
+        background: none;
+        background-color: #FFFFFF;
+        .px2rem(height,78);
+        .px2rem(line-height,78);
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        span{
+            .px2rem(margin-left,30);
+            .px2rem(margin-top,26);
+        }
+    }
+    .tcxq,.tcxq2{
+        background-color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+        .px2rem(height,88);
+        .px2rem(line-height,88);
+        .px2rem(margin-top,79);
+        color: #333333;
+        font-weight: 700;
+        .px2rem(font-size,28);
+        span{
+            display: inline-block;
+            border-bottom: 2px solid #333333;
+            .px2rem(padding-left,30);
+            .px2rem(padding-right,30);
+            .px2rem(height,88);
+            .px2rem(line-height,88);
+        }
+    }
+    .tcxq2{
+        margin: 0;
+    }
+    .wenxints{
+        text-align: center;
+    }
+    .menu-img{
+        .px2rem(height,27);
+        .px2rem(margin-top,30);
+        background: url(../../../public/menu/menu.png) no-repeat top center;
+        background-size: contain;
+    }
+    .menu-taocanming{
+        background-color: #FFFFFF;
+        color: #fd0304;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        .px2rem(padding-left,30);
+        .px2rem(height,80);
+        .px2rem(line-height,80);
+        .px2rem(font-size,36);
+        .menu-taocanming-s{
+            .px2rem(margin-left,30);
+            color: #333333;
+            .px2rem(font-size,28);
+        }
+    }
+    ol{
+        margin: 0;
+        padding: 0;
+    }
+    .caidan-youhui{
+        
+        .px2rem(padding-left,30);
+        color: #646464;
+        line-height: 24px;
+        h3{
+            margin: 0;
+            padding: 0;
+            .px2rem(font-size,24);
+            .px2rem(padding-top,30);
+            
+            color: #646464;
+            font-weight: 400;
+        }
+        background-color: #FFFFFF;
+    }
+}

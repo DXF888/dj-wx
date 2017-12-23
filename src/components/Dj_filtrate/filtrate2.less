@@ -1,0 +1,71 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  line-height: 0;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+#pingzhang{
+    position: fixed;
+    background-color: rgba(0,0,0,.4);
+    width: 100%;
+    z-index: 880;
+    display: none;
+}
+.filtrate{
+    background-color: #FFFFFF;
+        position: fixed;
+        z-index: 888;
+        .px2rem(top,88);
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+        .filter-area,
+        .filter-star,
+        .filter-synthetical {
+            a {
+                color: #4b4b4b;
+                font-size: 1.5em;
+                .px2rem(height,90);
+                .px2rem(line-height,90);
+                display: inline-block;
+                width: 100%;
+            }
+        }
+        .filter-area {
+            width: 33.3%;
+        }
+        .filter-synthetical {
+            width: 33.3%;
+        }
+        .filter-star {
+            width: 33.3%;
+        }
+        
+        #saixuan1,
+        #saixuan2,
+        #saixuan3{
+            li{
+                .px2rem(height,60);
+                .px2rem(line-height,60);
+            }
+            font-size: 1.5em;
+            text-align: left;
+            width: 100%;
+            display: none;
+            .px2rem(padding-left,30);
+        }
+}

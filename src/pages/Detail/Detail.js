@@ -16,7 +16,7 @@ const Detail = () => {
 	return (
 		<div>
 			<Dj_Details_header />
-			<Dj_Slider2 url='http://120.55.70.81:8088/dajiaserver/Rest/shop/get_hotel_info' />		
+			<Dj_Slider2 argt='hotelId' url='http://120.55.70.81:8088/dajiaserver/Rest/shop/get_hotel_info' />		
 		  	<Dj_Details />
 		  	<WhiteSpace size='xs' />
 		  	<Dj_Details3 />

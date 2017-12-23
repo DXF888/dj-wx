@@ -7,14 +7,11 @@ class Dj_Search extends React.Component {
 	state = {
 		value: '',
 	};
-	componentDidMount() {
-		this.autoFocusInst.focus();
-	}
 
 	render() {
 		return(
 			<div className="pf">
-				<SearchBar placeholder="点击输入搜索内容" ref={ref => this.autoFocusInst = ref} />
+				<SearchBar placeholder="搜索更多" maxLength={8} />
 				<span className='service'></span>
 			</div>
 		);

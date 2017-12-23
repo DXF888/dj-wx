@@ -1,0 +1,51 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+.Details_footer{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    bottom:0;
+    ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+        list-style: none;
+        li{
+            .px2rem(height,100);
+            .px2rem(line-height,100);
+            text-align: center;
+            float: left;
+            color: #ffffff;
+            .px2rem(font-size,18);
+        }
+        li:nth-child(1){
+            background: url(../../../public/details/anniudianhua.png) no-repeat center center;
+            width: 13.8%;
+            background-color: #f7efdf;
+            color: #000000;
+            border-right: 1px solid #CCCCCC;
+            background-size: contain;
+        }
+        li:nth-child(2){
+            background: url(../../../public/details/anniukefu.png) no-repeat center center;
+            width: 13.8%;
+            background-color: #f7efdf;
+            color: #000000;
+            background-size: contain;
+        }
+        li:nth-child(3){
+            width: 24%;
+            background-color: #ff8384;
+        }
+        li:nth-child(4){
+            width: 24%;
+            background-color: #fe6364;
+        }
+        li:nth-child(5){
+            width: 24%;
+            background-color: #f05053;
+        }
+    }
+}

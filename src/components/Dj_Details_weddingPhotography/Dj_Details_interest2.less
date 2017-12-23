@@ -1,0 +1,24 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+
+.interest2{
+    text-align: center;
+    p{
+        .px2rem(font-size,32);
+        span{
+            display: inline-block;
+            .px2rem(width, 100);
+            height: 0;
+            border-top: 1px solid #4b4b4b;
+            position: relative;
+            .px2rem(top,-5);
+        }
+        span:nth-child(1){
+            .px2rem(margin-right, 50);
+        }
+        span:nth-child(2){
+            .px2rem(margin-left, 50);
+        }
+    }
+}

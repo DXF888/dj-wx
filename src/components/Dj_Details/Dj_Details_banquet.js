@@ -10,9 +10,9 @@ import './Dj_Details_banquet.less';
 class Dj_Details_banquet extends React.Component {
 	constructor(props){
 		super(props);
-		var thisURL = location.hash;
-		var getval = thisURL.split('/');
-		var Id = getval.slice(-1).join();
+		let thisURL = location.hash;
+		let getval = thisURL.split('/');
+		let Id = getval.slice(-1).join();
 		this.state = {
 			loadinig: true,
 			data: [],
@@ -33,7 +33,7 @@ class Dj_Details_banquet extends React.Component {
 	  		  	      : data.length != 0
 	  		  	        ? 
 		  		  	        		data.map(({listimg, banquethallid ,banquethallname,tablemax}, idx) => (
-									      	<Link to={`/detail/${banquethallid}`} id={banquethallid} href={idx} key={idx} className='banquet_item'>
+									      	<Link to={`/banquet/${this.state.id}/${banquethallid}`} id={banquethallid} href={idx} key={idx} className='banquet_item'>
 		  		  	        					<img src={'http://120.55.70.81:8088/dajiaserver/'+listimg} />
 												<div className='banquet-content'>
 													<h3>{banquethallname}</h3>
@@ -58,7 +58,7 @@ class Dj_Details_banquet extends React.Component {
 		  		  	        				</Link>
 		  		  	        		))
 	  		  	        : data.map(({listimg, banquethallid ,businessname,tablemax}, idx) => (
-									      	<Link to={`/detail/${hotelid}`} id={banquethallid} href={idx} key={idx} className='banquet_item'>
+									      	<Link to={`/detail/${this.state.id}/${hotelid}`} id={banquethallid} href={idx} key={idx} className='banquet_item'>
 		  		  	        					<img src={'http://120.55.70.81:8088/dajiaserver/'+listimg} />
 												<div>
 													<h3>{banquethallname}</h3>

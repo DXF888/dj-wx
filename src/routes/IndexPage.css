@@ -4,4 +4,7 @@
 body{
 	font-size: 10px;
 }
-
+body {
+-webkit-overflow-scrolling: touch;
+overflow-scrolling: touch;
+}

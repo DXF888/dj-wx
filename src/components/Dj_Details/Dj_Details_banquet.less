@@ -5,9 +5,10 @@
     width: 100%;
     text-align: left;
     background-color: rgba(0,0,0,0);
-    .px2rem(margin-bottom,100);
-    .px2rem(margin-top, 10);
+    
     .banquet_item{
+        .px2rem(padding-top, 20);
+        overflow: hidden;
         width: 100%;
         display: block;
         background-color:#FFFFFF;
@@ -15,7 +16,7 @@
         .px2rem(padding-left, 30);
         .px2rem(padding-right, 30);
         .banquet-content{
-            display: inline-block;
+            float: left;
             .px2rem(margin-bottom, 20);
             
             h3{
@@ -24,21 +25,22 @@
                 padding: 0;
                 .px2rem(font-size, 30);
                 .px2rem(margin-bottom, 30);
+                font-weight: 400;
             }
             table{
                 color: #646464;
+                width: 100%;
                 .msg{
                     .px2rem(padding-right, 40);
                 }
             }
         }
         img{
-            display: inline-block;
+            float: left;
             .px2rem(width, 168);
             .px2rem(height, 126);
             .px2rem(padding-bottom, 20);
             .px2rem(margin-right, 20);
-            .px2rem(padding-top, 20);
             box-sizing: content-box;
             vertical-align: bottom;
         }

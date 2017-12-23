@@ -1,0 +1,30 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+.jianjie{
+    background-color: #ffffff;
+    .px2rem(font-size,26);
+    .px2rem(padding-top,5);
+    .px2rem(padding-bottom,5);
+    color: #4b4b4b;
+    h1{
+        color: #f05053;
+        .px2rem(font-size,18);
+    }
+    .zl{
+        color: #f05053;
+    }
+    ul{
+        li{
+            float: left;
+            width: 30%;
+            span{
+                display:inline-block;
+                text-align: center;
+            }
+            .time{
+                width: 60%;
+            }
+        }
+    }
+}

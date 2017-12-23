@@ -1,0 +1,29 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+.huodong{
+    .am-flexbox{
+        .px2rem(margin-bottom,5)
+    }
+    .am-flexbox-item{
+        .px2rem(padding-left,60);
+        .px2rem(height,30);
+        .px2rem(line-height,30);
+    }
+    .li{
+        background: url(../../../public/details/liebiaoli.png) no-repeat left center;
+        background-size: contain;
+    }
+    .hui{
+        background: url(../../../public/details/liebiaohui.png) no-repeat left center;
+        background-size: contain;
+    }
+    .jian{
+        background: url(../../../public/details/liebiaojian.png) no-repeat left center;
+        background-size: contain;
+    }
+    .fan{
+        background: url(../../../public/details/liebiaofan.png) no-repeat left center;
+        background-size: contain;
+    }
+}

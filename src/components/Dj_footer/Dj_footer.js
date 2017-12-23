@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {Flex, Modal, WhiteSpace, WingBlank, Toast ,TabBar} from 'antd-mobile';
-import Dj_Slider from '../Dj_Slider/Dj_Slider';
+import Dj_Slider3 from '../Dj_Slider/Dj_Slider3';
 import Dj_Search from '../Dj_Search/Dj_Search';
 import Dj_nav from '../Dj_nav/Dj_nav';
 import Dj_Tabs from '../Dj_Tabs/Dj_Tabs';
@@ -9,6 +9,7 @@ import Dj_NoticeBar from '../Dj_NoticeBar/Dj_NoticeBar';
 import Dj_subnav from '../Dj_subnav/Dj_subnav';
 import Dj_Collect from '../Dj_Collect/Collect';
 import Dj_Shopping_cart from '../Dj_Shopping_cart/Shopping_cart';
+import My from '../../pages/my/My';
 
 
 import './Dj_footer.less';
@@ -40,6 +41,7 @@ class Dj_footer extends React.Component {
       fullScreen: true,
     };
   }
+  
   render() {
     return (
       <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', bottom:0  } : { height: 1000 }}>
@@ -72,11 +74,11 @@ class Dj_footer extends React.Component {
             }}
           >
           	<Dj_Search />
-			    	<Dj_Slider url='http://120.55.70.81:8088/dajiaserver/Rest/Shop/get_recommend_head' />
-			    	<Dj_nav />
-			    	<Dj_NoticeBar />
-			    	<Dj_subnav />
-			    	<Dj_Tabs />
+			<Dj_Slider3 />
+			<Dj_nav />
+			<Dj_NoticeBar />
+			<Dj_subnav />
+			<Dj_Tabs />
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -158,7 +160,7 @@ class Dj_footer extends React.Component {
               });
             }}
           >
-            我的
+            <My />
           </TabBar.Item>
         </TabBar>
       </div>
